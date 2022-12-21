@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Сайт димы</title>
 </head>
 <body>
@@ -13,6 +14,7 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Journal</a></li>
             <li><a href="#">About us</a></li>
+            <li><a href="https://google.com">Google</a></li>
         </menu>
     </header>
     <!-- Заголовки -->
@@ -22,6 +24,10 @@
     <h4>4</h4>
     <h5>5</h5>
     <h6>6</h6>
+    <div class="info">
+        <h2>h2 heading</h2>
+        <h2 class="info-heading">h2 headin 2</h2>
+    </div>
     <!-- Строчные тэги -->
     <p>Лучше <b>туда</b> <strong>туда</strong> <br>не <span title="Или нет">заходить</span></p>
     <hr>
@@ -48,56 +54,93 @@
             </tr>
         </tbody>
     </table>
-    <a href="https://ya.ru/" target="_blank" title="Перейти на yandex"><img src="../images/yandex.svg" alt="Yandex" width="300"></a>
+    <table class="pseudo-table">
+        <thead>
+            <tr>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Иванов</td>
+                <td>Иван</td>
+                <td>Иванович</td>
+            </tr>
+            <tr>
+                <td>Петров</td>
+                <td>Сергей</td>
+                <td>Васильевич</td>
+            </tr>
+            <tr>
+                <td>Алексеев</td>
+                <td>Иван</td>
+                <td>Васильевич</td>
+            </tr>
+            <tr>
+                <td colspan="3">Всего: 3 человека</td>
+            </tr>
+        </tbody>
+    </table>
     <p><a href="mailto: admin@johnautumn.ru">Написать мне письмо</a></p>
-    <form action="index.html" method="get">
-        <p>Логин</p>
-        <input type="text" name="login" placeholder="Логин" title="Введите логин!">
-        <p>Пароль</p>
-        <input type="password" name="pass" placeholder="Пароль">
-        <button type="submit">Войти</button>
-        <button type="reset">Сбросить</button>
-        <button type="button">Привет</button>
-    </form>
-    <hr>
-    <form action="index.html" method="get" enctype="text/plain">
-        <p>
-            <label for="name">Имя</label>
-            <input id="name" name="name" type="text" value="Димон" required>
-        </p>
-        <p>
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" required>
-        </p>
-        <p>
-            <label for="birthday">День рождения</label>
-            <input id="birthday" name="birthday" type="date" required>
-        </p>
-        <p>
-            <span>Пол:</span>
-            <label for="gender_m">Мужской</label><input id="gender_m" name="gender" type="radio" value="man">
-            <label for="gender_w">Женский</label><input id="gender_w" name="gender" type="radio" value="woman" checked="checked">
-        </p>
-        <p>
-            <label for="action">Цель регистрации</label>
-            <select name="action" id="action">
-                <option value="pinat">Пинать хуи</option>
-                <option value="pit">Пить пиво</option>
-            </select>
-        </p>
-        <p>
-            <label for="color">Любимый цвет</label>
-            <input type="color" name="color" id="color">
-        </p>
-        <p><input type="range" name="" id="" min="0" max="50" value="30"></p>
-        <p>
-            <label for="agree">Я принимаю условия <a href="#">пользовательского соглашения</a></label>
-            <input type="checkbox" name="agree" id="agree" required>
-        </p>
-        <input type="hidden" name="hidden" value="1234">
-        <p>
-            <button type="submit">Зарегистрироваться</button>
-        </p>
-    </form>
+    <div>
+        <div class="login-wrapper">
+            <form action="index.html" method="get" class="login">
+                <p>Логин</p>
+                <input type="text" name="login" placeholder="Логин" title="Введите логин!">
+                <p>Пароль</p>
+                <input type="password" name="pass" placeholder="Пароль">
+                <p><button type="submit">Войти</button></p>
+                <p><button type="reset">Сбросить</button></p>
+                <p><button type="button">Привет</button></p>
+            </form>
+        </div>
+        <div class="registration-wrapper">
+            <form action="index.html" method="get" enctype="text/plain" class="registration">
+                <p>
+                    <label for="name">Имя</label>
+                    <input id="name" name="name" type="text" value="Димон" required>
+                </p>
+                <p>
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" required>
+                </p>
+                <p>
+                    <label for="birthday">День рождения</label>
+                    <input id="birthday" name="birthday" type="date" required>
+                </p>
+                <p>
+                    <span>Пол:</span>
+                    <label for="gender_m">Мужской</label><input id="gender_m" name="gender" type="radio" value="man">
+                    <label for="gender_w">Женский</label><input id="gender_w" name="gender" type="radio" value="woman" checked="checked">
+                </p>
+                <p>
+                    <label for="action">Цель регистрации</label>
+                    <select name="action" id="action">
+                        <option value="pinat">Пинать хуи</option>
+                        <option value="pit">Пить пиво</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="color">Любимый цвет</label>
+                    <input type="color" name="color" id="color">
+                </p>
+                <p><input type="range" name="" id="" min="0" max="50" value="30"></p>
+                <p>
+                    <label for="agree">Я принимаю условия <a href="#">пользовательского соглашения</a></label>
+                    <input type="checkbox" name="agree" id="agree" required>
+                </p>
+                <input type="hidden" name="hidden" value="1234">
+                <p>
+                    <button type="submit">Зарегистрироваться</button>
+                </p>
+            </form>
+            <div class="overlay"></div>
+        </div>
+    </div>
+    <div class="search">
+        <a href="https://ya.ru/" target="_blank" title="Перейти на yandex"><img src="../images/yandex.svg" alt="Yandex"></a>
+    </div>
 </body>
 </html>
